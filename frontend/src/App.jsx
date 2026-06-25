@@ -34,7 +34,7 @@ function App() {
   const fetchSensorData = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/sensor-data"
+        "https://smart-soil-water-management.onrender.com/sensor-data"
       );
 
       setSensorData(response.data);
@@ -46,7 +46,7 @@ function App() {
   const fetchWaterRequirement = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/water-requirement"
+        "https://smart-soil-water-management.onrender.com/water-requirement"
       );
 
       setWaterData(response.data);
@@ -65,7 +65,7 @@ function App() {
   const predictCrop = async () => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/predict",
+        "https://smart-soil-water-management.onrender.com/predict",
         {
           N: Number(formData.N),
           P: Number(formData.P),
